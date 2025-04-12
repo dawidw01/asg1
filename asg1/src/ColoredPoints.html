@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Change a point color</title>
+</head>
+
+<body onload="main()">
+  <div style="display: flex; align-items: flex-start; gap: 20px;">
+    <canvas id="webgl" width="400" height="400">
+      Please use a browser that supports "canvas"
+    </canvas>
+  
+    <!-- Add the image here -->
+    <img src="picture.jpeg" alt="Picture" width="385">
+  </div>
+
+  <p id="numdot"> Stats </p>
+
+  <!-- <button type="button" id="green">Green</button>
+  <button type="button" id="red">Red</button> -->
+  <button type="button" id="clearButton">Clear</button>
+
+  <br><br>
+  <p style="display: inline;"> <strong>Drawing mode:</strong> </p>
+  <button type="button" id="pointButton">Point</button>
+  <button type="button" id="triButton">Triangle</button>
+  <button type="button" id="circleButton">Circle</button>
+
+  <br><br>
+
+  <p style="display: inline;">Red
+    <input type="range" min="0" max="100" value="0" class="slider" id="redSlide">
+  </p>
+  <p style="display: inline;">Green
+    <input type="range" min="0" max="100" value="0" class="slider" id="greenSlide">
+  </p>
+  <p style="display: inline;">Blue
+    <input type="range" min="0" max="100" value="0" class="slider" id="blueSlide">
+  </p>
+
+  <br><br>
+
+  <p style="display: inline;">
+    Size: <input type="range" min="5" max="40" value="0" class="slider" id="sizeSlide">
+  </p>
+
+  <p style="display: inline;">
+    Segment Count: <input type="range" min="3" max="40" value="0" class="slider" id="segmentSlide">
+  </p>
+
+  <br><br>
+  <button type="button" id="pictureButton">Draw Picture</button>
+
+  <br><br>
+  <p style="display: inline;">
+    I am awesome 😎
+  </p>
+  <button type="button" id="undoButton">Undo</button>
+  <button type="button" id="redoButton">Redo</button>
+
+
+  <script src="../lib/webgl-utils.js"></script>
+  <script src="../lib/webgl-debug.js"></script>
+  <script src="../lib/cuon-utils.js"></script>
+  <script src="ColoredPoints.js"></script>
+  <script src="Triangle.js"></script>
+  <script src="Circle.js"></script>
+  <script src="Point.js"></script>
+</body>
+
+</html>
